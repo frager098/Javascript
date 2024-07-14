@@ -21,3 +21,8 @@ let a = 10 ;
 console.log(a);
 a = 11 ;
 console.log(a);
+//Task 6 
+const b = 9 ;
+console.log(b);
+b = 20 ; //Error we can't reassign a constant variable
+console.log(b);
