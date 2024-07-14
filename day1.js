@@ -34,3 +34,7 @@ console.log(a1,typeof(a1))
 console.log(a2,typeof(a2))
 console.log(a3,typeof(a3))
 console.log(a4,typeof(a4))
+//Script that demonstrates the difference between let,const when it comes to reassignment
+let b1,b2;const b3 = 20 ; const b4 = 40 ;
+b1 = 15 ; b2 = 10 ;  //We can reassign values to the variables declared with let keyword
+b3 = 35 ; b4 = 30 ; //Error , We can't reassign values to the variables declared with const keyword
