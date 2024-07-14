@@ -16,3 +16,8 @@ let secondVariable = "string";
 let thirdVariable = 0 ;
 let array = [1,2,3,4]
 console.log(typeof(firstVariable),typeof(secondVariable),typeof(thirdVariable),typeof(array))
+//Task 5
+let a = 10 ;
+console.log(a);
+a = 11 ;
+console.log(a);
