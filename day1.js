@@ -24,5 +24,13 @@ console.log(a);
 //Task 6 
 const b = 9 ;
 console.log(b);
-b = 20 ; //Error we can't reassign a constant variable
+// b = 20 ; //Error we can't reassign a constant variable
 console.log(b);
+                            //Feature Request
+//Script that logs the type of variable as well as value of a variable to the console
+let a1,a2,a3,a4;
+a1 = 99 ; a2="hahaha"; a3 = ["as","you","are",0,1,99];a4=["Arham",a3]
+console.log(a1,typeof(a1))
+console.log(a2,typeof(a2))
+console.log(a3,typeof(a3))
+console.log(a4,typeof(a4))
