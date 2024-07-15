@@ -40,13 +40,32 @@
                     //Comparision Operators
 //Task 1
 //Compare two numbers using > and < sign and log the result to the console
-let a6 = +prompt("Enter 1st Number") ;
-let b6 = +prompt("Enter 1st Number") ;
-if (a6 > b6 )
-{
-    console.log(a6," is greater than ",b6);
-}
-else{
-    console.log(a6 , " is lesser than ", b6);
+// let a6 = +prompt("Enter 1st Number") ;
+// let b6 = +prompt("Enter 2nd Number") ;
+// if (a6 > b6 )
+// {
+//     console.log(a6," is greater than ",b6);
+// }
+// else{
+//     console.log(a6 , " is lesser than ", b6);
 
-}
+// }
+//Task 2
+
+//Compare two numbers using >= and <= sign and log the result to the console
+// let a7 = +prompt("Enter 1st Number") ;
+// let b7 = +prompt("Enter 2nd Number") ;
+// if (a7 >= b7 )
+// {
+//     console.log(a7 ," is either greater than or equal to ",b7);
+// }
+// else{
+//     console.log(a7 ," is either lesser than or equal to ",b7);
+
+// }
+//Task 3 
+//Write a program to compare numbers using == and === operators
+// let a8 = + prompt ("Enter 1st number");
+// let b8 = + prompt ("Enter 2nd number");
+// console.log(a8 == b8 );
+// console.log(a8 === b8 );
