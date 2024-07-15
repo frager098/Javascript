@@ -20,7 +20,19 @@
 // console.log(c2);
 //Task 4 
 //Write a program to divide two numbers and log the result to the console
-let a3 = +prompt("Enter 1st Number");
-let b3 = +prompt("Enter 2nd Number") ;
-let c3 = a3 / b3 ;
-console.log(c3);
+// let a3 = +prompt("Enter 1st Number");
+// let b3 = +prompt("Enter 2nd Number") ;
+// let c3 = a3 / b3 ;
+// console.log(c3);
+                            //Activity 2 
+                        //Assignment Operators
+//Task 1 
+//Use += operator to add a number to the variable and log the result to the console
+let a4 = +prompt("Enter Number");
+a4 += + prompt ("Enter number you want to add in a previous number") ;
+console.log(a4) ;
+//Task 2 
+//Use -= operator to subtract a number to the variable and log the result to the console
+let a5 = +prompt("Enter Number");
+a5 -= + prompt ("Enter number you want to add in a previous number") ;
+console.log(a5) ;
