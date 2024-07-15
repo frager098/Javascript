@@ -69,3 +69,20 @@
 // let b8 = + prompt ("Enter 2nd number");
 // console.log(a8 == b8 );
 // console.log(a8 === b8 );
+                    //Activity 4 Comparision Operators
+//Task 1
+//Write a program that combines the two conditions using && and log the result to the console
+// let a9 = "First Variable" ;
+// let b9 = "Second Variable" ;
+// console.log(a9 && b9 ); // Both a9 and b9 are true , logical AND will return 2nd Variable
+//Task 2
+//Write a program that combines the two conditions using || and log the result to the console
+// let a10 = "First Variable" ;
+// let b10 = "Second Variable" ;
+// console.log(a9 || b9 ); // Both a9 and b9 are true , logical OR will return 1st Variable
+//Task 3
+//Write a program that combines the two conditions using ! to negate the condition and log the result to the console
+let a11 = "First Variable" ;
+let b11 = "Second Variable" ;
+console.log(!(a11 && b11) ); // Both a9 and b9 are true , logical AND will return Second Variable and ! will negate it to false
+console.log(!(a11 || b11) ); // Both a9 and b9 are true , logical OR will return First Variable and ! will negate it to false
