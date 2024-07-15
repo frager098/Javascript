@@ -28,11 +28,25 @@
                         //Assignment Operators
 //Task 1 
 //Use += operator to add a number to the variable and log the result to the console
-let a4 = +prompt("Enter Number");
-a4 += + prompt ("Enter number you want to add in a previous number") ;
-console.log(a4) ;
+// let a4 = +prompt("Enter Number");
+// a4 += + prompt ("Enter number you want to add in a previous number") ;
+// console.log(a4) ;
 //Task 2 
 //Use -= operator to subtract a number to the variable and log the result to the console
-let a5 = +prompt("Enter Number");
-a5 -= + prompt ("Enter number you want to add in a previous number") ;
-console.log(a5) ;
+// let a5 = +prompt("Enter Number");
+// a5 -= + prompt ("Enter number you want to add in a previous number") ;
+// console.log(a5) ;
+                    //Activity 3 
+                    //Comparision Operators
+//Task 1
+//Compare two numbers using > and < sign and log the result to the console
+let a6 = +prompt("Enter 1st Number") ;
+let b6 = +prompt("Enter 1st Number") ;
+if (a6 > b6 )
+{
+    console.log(a6," is greater than ",b6);
+}
+else{
+    console.log(a6 , " is lesser than ", b6);
+
+}
