@@ -82,7 +82,17 @@
 // console.log(a9 || b9 ); // Both a9 and b9 are true , logical OR will return 1st Variable
 //Task 3
 //Write a program that combines the two conditions using ! to negate the condition and log the result to the console
-let a11 = "First Variable" ;
-let b11 = "Second Variable" ;
-console.log(!(a11 && b11) ); // Both a9 and b9 are true , logical AND will return Second Variable and ! will negate it to false
-console.log(!(a11 || b11) ); // Both a9 and b9 are true , logical OR will return First Variable and ! will negate it to false
+// let a11 = "First Variable" ;
+// let b11 = "Second Variable" ;
+// console.log(!(a11 && b11) ); // Both a9 and b9 are true , logical AND will return Second Variable and ! will negate it to false
+// console.log(!(a11 || b11) ); // Both a9 and b9 are true , logical OR will return First Variable and ! will negate it to false
+                //Ternary Operator 
+//Task 1
+let a12 = + prompt ("Enter Number") ;
+let b12 = (a12 < 18) ? "Lesser":"Greater";
+console.log(b12)
+//Nullish Coalescing Operator
+let name = 32;
+let text = "missing";
+let result = name ?? text;
+console.log(result);
