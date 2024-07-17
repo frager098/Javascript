@@ -46,11 +46,30 @@
 //     console.log(factorial);
 //Activity 4 Nested For loops
 //Task 7 : Write a program to print patterns using nested for loop
-for ( let i = 0 ; i < 5 ; i++ )
-{
-    for ( let j = 0 ; j < i + 1 ; j++ )
-    {
-        console.log("*");
-    }
-    console.log("");
-}
+// for ( let i = 0 ; i < 5 ; i++ )
+// {
+//     for ( let j = 0 ; j < i + 1 ; j++ )
+//     {
+//         console.log("*");
+//     }
+//     console.log("");
+// }
+//Activity 5 Loop Control Statements 
+//Task 8 : Write a program to print numbers 1 to 10 and skip the 5 using continue  statement
+// for ( let i = 1 ; i < 11 ; i++ )
+//     {
+//         if ( i == 5 )
+//         {
+//             continue ;
+//         }
+//         console.log(i);
+//     }
+    // Task 8 : Write a program to print numbers 1 to 10 but stop the program when number is 7 break  statement
+    for ( let i = 1 ; i < 11 ; i++ )
+        {
+            if ( i == 7 )
+            {
+                break  ;
+            }
+            console.log(i);
+        }
