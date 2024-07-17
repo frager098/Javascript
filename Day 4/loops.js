@@ -36,11 +36,21 @@
 // }
 // while(numberToPrint < 6 )
 //Task 6 : Write a program to print factorial of a number using do while loop
-let n = +prompt ("Enter Number") ;
-let factorial = n ;
-do{
-    factorial = factorial * (n - 1) ;
-    n-- ;
-} 
-while ( (n - 1) > 0 )
-    console.log(factorial);
+// let n = +prompt ("Enter Number") ;
+// let factorial = n ;
+// do{
+//     factorial = factorial * (n - 1) ;
+//     n-- ;
+// } 
+// while ( (n - 1) > 0 )
+//     console.log(factorial);
+//Activity 4 Nested For loops
+//Task 7 : Write a program to print patterns using nested for loop
+for ( let i = 0 ; i < 5 ; i++ )
+{
+    for ( let j = 0 ; j < i + 1 ; j++ )
+    {
+        console.log("*");
+    }
+    console.log("");
+}
