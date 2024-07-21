@@ -54,6 +54,16 @@ const charCheck = (str , toSearch) =>{
         return flag ;
     }
 }
+//Activity 4 Function Parameters and Default Values
+//Task 7 : Write a function that takes 2 parameters and return their product .Provide a default value to second parameter.
+function def(a,b=10)
+{
+    return a*b;
+}
+//Task 8 : Write a function that takes a person's name and age that returns a greeting message.Provide a default value for the age.
+const greet = (function(name , age = 10){
+    console.log (`Hello my name is ${name} and I am ${age} years old`);
+})( "Arham");
 // let squareOfANumber = squaringNumbers(number);
 // console.log(squareOfANumber);
 // let n1 , n2 ;
@@ -68,5 +78,5 @@ const charCheck = (str , toSearch) =>{
 // let inputString = prompt("Enter a string");
 // let toCheck = prompt("Enter a character you want to search");
 // console.log(charCheck(inputString,toCheck));
+// console.log(def(10))
 
- 
