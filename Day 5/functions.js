@@ -61,9 +61,35 @@ function def(a,b=10)
     return a*b;
 }
 //Task 8 : Write a function that takes a person's name and age that returns a greeting message.Provide a default value for the age.
-const greet = (function(name , age = 10){
-    console.log (`Hello my name is ${name} and I am ${age} years old`);
-})( "Arham");
+// const greet = (function(name , age = 10){
+//     console.log (`Hello my name is ${name} and I am ${age} years old`);
+// })( "Arham");
+
+//Activity 5 Higher Order Functions
+//Task 9 : Write a higher order function that takes a function and a number , and calls that function many times
+const func = (a = 1 , b = 2)=>{
+    return a*b;
+}
+const higherOrderFunction = (a,b)=>{
+    let x = 0 ;
+    for (let i = 0 ; i < 2 ; i++ ){
+        x = x + a(9,1);
+    }
+    return x + b ;
+}
+//Task 10 : Write a higher order functions that takes 2 functions and a value , applies the first function to the value  , and then applies the second function to the result 
+const firstFunction = function (a,b){
+    return a - b ;
+}
+const secondFunction = function (a,b){
+    return a + b ;
+}
+const secondHigherOrderFunction  = function (a,b,c){
+    let result = a(8,11)/c; //-3
+    result = b(3,1)*result ; //-12
+    return result ;
+}
+console.log(secondHigherOrderFunction(firstFunction,secondFunction,1));
 // let squareOfANumber = squaringNumbers(number);
 // console.log(squareOfANumber);
 // let n1 , n2 ;
@@ -79,4 +105,4 @@ const greet = (function(name , age = 10){
 // let toCheck = prompt("Enter a character you want to search");
 // console.log(charCheck(inputString,toCheck));
 // console.log(def(10))
-
+// console.log(higherOrderFunction( func , 2));
