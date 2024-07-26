@@ -9,5 +9,11 @@ const arr = [1,2,3,4,5] ;
 // console.log(arr.push(6)); It returning the added element
 // console.log(arr);
 //Task 4 : Use pop method to remove the last element from the array and log the updated array 
-console.log(arr.pop()); // returning the deleted element
-console.log(arr)
+// console.log(arr.pop()); // returning the deleted element
+// console.log(arr)
+// Task 5 : Use the shift method to remove the first element from the array and log the updated array .
+// console.log(arr.shift()); //Returns the first element it removed
+// console.log(arr);
+// Task 6 : Use the unshift method to add a new number to the beginning of the array and log the updated array.
+console.log(arr.unshift(10,11,12,13)); // Returns the length of updated array
+console.log(arr);
