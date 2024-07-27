@@ -15,5 +15,18 @@ const arr = [1,2,3,4,5] ;
 // console.log(arr.shift()); //Returns the first element it removed
 // console.log(arr);
 // Task 6 : Use the unshift method to add a new number to the beginning of the array and log the updated array.
-console.log(arr.unshift(10,11,12,13)); // Returns the length of updated array
-console.log(arr);
+// console.log(arr.unshift(10,11,12,13)); // Returns the length of updated array
+// console.log(arr);
+// Array Methods ( Intermediate )
+// Task 7 : Use the map method to create a new array where each number is doubled and log the new array
+// console.log( arr.map( value => value*2 ));
+// console.log( arr.map( function ( value){
+//     return value*2 ;
+// } ));
+// Task 8 : Use the filter method to create the new array with only even numbers and log the new array
+function evenOrOdd(num){
+    let res =  (num % 2 == 0) ; 
+    console.log(res);
+    return res;
+}
+console.log(arr.filter(evenOrOdd));
