@@ -31,16 +31,30 @@ const arr = [1,2,3,4,5] ;
 // }
 // console.log(arr.filter(evenOrOdd));
 //Task 9 : Use the reduce method to calculate the sum of all the numbers in the array and log the result to the console
-let newFunction = ( total , num ) => total + num ;
-console.log(arr.reduce(newFunction));
+// let newFunction = ( total , num ) => total + num ;
+// console.log(arr.reduce(newFunction));
 //Activity 4 Array Iteration 
 // Task 10 : Use for loop to iterate over an array and log each element to the console
 // for ( let i = 0 ; i < arr.length ; i++ ){
 //     console.log(arr[i]);
 // }
 //Task 11 : Use for each method to iterate over the array and log the result to the console
-let iter = arr.forEach(function (num)
-{
-    console.log(num);
-})
+// let iter = arr.forEach(function (num)
+// {
+//     console.log(num);
+// })
 // console.log(iter); //Return undefined
+//Activity 5 Multi-dimensional array 
+//Task 12 : Create a two dimensional array(matrix) and log the entire result to the console
+const array = [ [1,2,3] , [4,5,6]];
+// array.forEach(function (num){
+//     num.forEach(function (number){
+//         console.log(number);
+//     })
+// });
+//Task 13 : Access and log the specific element from the two dimensional array
+array.forEach( function (num){
+    num.forEach(function (number){
+        if (number % 2 == 0 ) console.log(number) ;
+    })
+}) 
