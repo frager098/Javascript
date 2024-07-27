@@ -24,9 +24,12 @@ const arr = [1,2,3,4,5] ;
 //     return value*2 ;
 // } ));
 // Task 8 : Use the filter method to create the new array with only even numbers and log the new array
-function evenOrOdd(num){
-    let res =  (num % 2 == 0) ; 
-    console.log(res);
-    return res;
-}
-console.log(arr.filter(evenOrOdd));
+// function evenOrOdd(num){
+//     let res =  (num % 2 == 0) ; 
+//     console.log(res);
+//     return res;
+// }
+// console.log(arr.filter(evenOrOdd));
+//Use the reduce method to calculate the sum of all the numbers in the array and log the result to the console
+let newFunction = ( total , num ) => total + num ;
+console.log(arr.reduce(newFunction));

@@ -21,3 +21,6 @@ const z = () => {let res = [18 , 11 , 19 , 10 ,23 , 8].filter(canVote)
     console.log(res);
  }
 z();
+//Reduce method
+let newFunction = ( total , num ) => total - num ;
+console.log(arr.reduce(newFunction));
