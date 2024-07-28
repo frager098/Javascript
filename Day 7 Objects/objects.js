@@ -21,5 +21,15 @@ const myObj1 = {
 // //Task 3 : Add a method to the book object which returns the string of book's title , author and year and log the result of calling this method to the console.
 // myObj1.display();
 //Task 4 : Add a method to the book object which accepts an year and update the property year of object amd log the result to the console.
-myObj1.updateYear(2024);
-myObj1.display();
+// myObj1.updateYear(2024);
+// myObj1.display();
+//Activity 3 Nested Objects
+//Task 5 : Create a nested object representing a library with properties like name and books ( an array of book objects ) , and log the library object to the console
+const library = { 
+    name : "Ubit Library ",
+    books : ["Discrete Mathematics","Data Structure And Algorithms","Operating System","Database management System","Object Oriented Programming"] ,
+    display : function () { console.log(`Library name is ${this.name} and books are ${this.books}`)}
+}
+// console.log(library);
+//Task 6 : Access names and books
+library.display();
