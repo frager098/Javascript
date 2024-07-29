@@ -32,4 +32,36 @@ const library = {
 }
 // console.log(library);
 //Task 6 : Access names and books
-library.display();
+// library.display();
+// Activity 4 This Keyword
+// Task 7 : Add a method to the book object that uses this keyword to return a string with the book's title and year ,and log the result of calling this method
+const book = new Object();
+book.year = 2022 ;
+book.title = "Harry potter";
+book.display = function () {
+    console.log(this.title , this.year);
+}
+// console.log(book.title)
+// book.display();
+// Activity 5 Object Iteration
+for (const key in book ) {
+    if (book.hasOwnProperty.call(book, key)) {
+        const element = book[key];
+        console.log(element);       
+    }
+}
+for ( const index in library ){
+    if (library.hasOwnProperty.call(library,index)){
+        const elem = library[index];
+        console.log(elem);
+    }
+}
+for ( const ind in  myObj1){
+    if(myObj1.hasOwnProperty.call(myObj1,ind)){
+        const ele = myObj1[ind];
+        console.log(ele);
+    }
+}
+// for ( variable-name in Object ){
+
+// }
