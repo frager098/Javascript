@@ -44,24 +44,50 @@ book.display = function () {
 // console.log(book.title)
 // book.display();
 // Activity 5 Object Iteration
+//Task 8 : Use for in loop to iterate over the properties of the book object and log each property and it's value.
+// let a = document.getElementById('demo')
 for (const key in book ) {
-    if (book.hasOwnProperty.call(book, key)) {
+    // if (book.hasOwnProperty.call(book, key)) {
         const element = book[key];
-        console.log(element);       
-    }
+        // console.log(element);       
+        // a.innerHTML = element ;
+        // }
 }
-for ( const index in library ){
-    if (library.hasOwnProperty.call(library,index)){
-        const elem = library[index];
-        console.log(elem);
-    }
-}
-for ( const ind in  myObj1){
-    if(myObj1.hasOwnProperty.call(myObj1,ind)){
-        const ele = myObj1[ind];
-        console.log(ele);
-    }
-}
-// for ( variable-name in Object ){
-
+// for ( const index in library ){
+//     if (library.hasOwnProperty.call(library,index)){
+//         const elem = library[index];
+//         console.log(elem);
+//     }
 // }
+// for ( const ind in  myObj1){
+//     if(myObj1.hasOwnProperty.call(myObj1,ind)){
+//         const ele = myObj1[ind];
+//         console.log(ele);
+//     }
+// }
+// for (library[key , value ] in library){
+//     console.log(key)
+// }
+// const keys = Object.values(book);
+// console.log(keys)
+// Create an Object
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+  };
+  
+  // Change Property
+  Object.defineProperty(person, "age", {enumerable:0}); //Now you cant access this property with object.keys or object.values method but you can access with for in loop
+  
+  // Get the Keys
+//   const keys = Object.values(person);
+//   console.log(keys)
+//   for (const hm in person){
+//     console.log(person[hm]);
+//   }
+console.log(Object.hasOwnProperty('defineProperty'));
+//Task 9 : Use object.keys and Object.values methods to log all the keys and values of the book object.
+console.log(Object.keys(person))
+console.log(Object.values(person))
