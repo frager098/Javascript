@@ -22,3 +22,10 @@ const uList = document.getElementById("ul");
 const newLi = document.createElement("li");
 newLi.textContent = "New Li ";
 uList.appendChild(newLi);
+// Activity 3 : Removing Elements
+// Task 5 : Select an HTML element and remove it from the DOM.
+uList.removeChild(newLi);
+// Task 6 : Remove the last child of specific HTML element
+const lastChildOfUl = uList.lastElementChild;
+console.log(lastChildOfUl);
+uList.removeChild(lastChildOfUl);
