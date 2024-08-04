@@ -29,3 +29,21 @@ uList.removeChild(newLi);
 const lastChildOfUl = uList.lastElementChild;
 console.log(lastChildOfUl);
 uList.removeChild(lastChildOfUl);
+// Activity 4 : Modifying Attributes and classes
+// Task 7 : Select an HTML element and change one of it's attributes 
+const element = document.getElementById("img");
+element.setAttribute("src" , "Images/img1.jpeg");
+element.setAttribute("width" , "200");
+// Task 8 : Add and remove the CSS class to/from the HTML element
+function addClass(){
+    const alterClass = document.getElementById("div1");
+    alterClass.classList.add("myClass");
+}
+function removeClass(){
+    const alterClass = document.getElementById("div1");
+    alterClass.classList.remove("myClass");
+}
+// function toggleClass(){
+//     const alterClass = document.getElementById("div1");
+//     alterClass.classList.toggle("myClass");
+// }

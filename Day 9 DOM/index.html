@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>HTML DOM</title>
+    <style>
+        .myClass{
+            background-color: aqua;
+            font-weight: bolder;
+        }
+    </style>
 </head>
 <body id="bo">
     <h1 id="demo" class="d">HI</h1>
@@ -19,7 +25,12 @@
         <li>adrak</li>
         <li> hi   </li>
     </ul>
-    <div id="div1"></div>
+    <img src="Images/img.webp" id="img" alt="frog Image" width="500">
+    <div id="div1">
+        Adding and Removing CSS classes
+    </div>
+    <button onclick = "addClass()">Add CSS class</button>
+    <button onclick="removeClass()">Remove CSS class</button>
     <script src="dom.js">
     </script>
 </body>
