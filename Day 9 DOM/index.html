@@ -7,6 +7,16 @@
             background-color: aqua;
             font-weight: bolder;
         }
+        .btClass{
+            background-color: pink;
+            color: red;
+        }
+        .borderClass{
+            border: 1px solid black;
+        }
+        .changeBorder{
+            border: 1px solid orange;
+        }
     </style>
 </head>
 <body id="bo">
@@ -29,8 +39,11 @@
     <div id="div1">
         Adding and Removing CSS classes
     </div>
-    <button onclick = "addClass()">Add CSS class</button>
+    <button ></button>
+    <button onclick = "addClass()" >Add CSS class</button>
     <button onclick="removeClass()">Remove CSS class</button>
+    <button onclick="changeContent()" id="bt-3">Learning Event Listener</button>
+    <div class="borderClass" id="div2">Hi</div>
     <script src="dom.js">
     </script>
 </body>

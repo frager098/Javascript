@@ -47,3 +47,19 @@ function removeClass(){
 //     const alterClass = document.getElementById("div1");
 //     alterClass.classList.toggle("myClass");
 // }
+// Activity 5 : Event Handling
+// Task 9 : Add a click event listener to a button that changes the text content of a paragraph
+function changeContent(){
+    const butt = document.getElementById("bt-3");
+    butt.innerHTML = "Implemented";
+    butt.classList.add('btClass');
+}
+//Task 10 : Add mouseover Event Listener to an element that changes it's border color.
+const testingMouseOver = document.getElementById("div2");
+testingMouseOver.addEventListener('mouseover' , function (){
+    testingMouseOver.classList.add("changeBorder");
+})
+// const testingMouseOut = document.getElementById("div2");
+testingMouseOver.addEventListener('mouseout' , function (){
+    testingMouseOver.classList.remove("changeBorder");
+})
