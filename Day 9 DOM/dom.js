@@ -12,3 +12,13 @@ x3.style.color = "aqua";
 // Task 3 : Create a new div element with some text content and append it to the body.
 // document.createElement("div")
 const newDiv = document.createElement("div");
+const textNode = document.createTextNode("Hello!")
+newDiv.appendChild(textNode);
+// const bodyy = document.getElementsByTagName("body");
+// bodyy[0].appendChild(newDiv);
+document.body.appendChild(newDiv);
+// Task 4 : Create a new li element and add it to an existing ul list.
+const uList = document.getElementById("ul");
+const newLi = document.createElement("li");
+newLi.textContent = "New Li ";
+uList.appendChild(newLi);
