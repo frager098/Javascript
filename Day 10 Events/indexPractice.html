@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p00{
+            text-align: center;
+            font-size: 1000%;
+            background-color: aqua;
+        }
+        .changeColor{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- <p id="al"></p>
+     <input type="text">
+    <a href = "javaScript:void(0)" onclick=" const p1 = document.createElement('p'); p1.textContent = 'Thank You!' ; document.body.appendChild(p1); p1.classList.add(('p00')) ">Click</a>
+    <button onmouseover="const button = document.getElementsByTagName('button');
+    button[0].innerHTML = 'info.' " onmouseout=" const button =document.getElementsByTagName('button') ;button[0].innerHTML = 'button' ">button</button> <br />
+    <input type="text" size = "50" value = "email" onfocus="this.style.backgroundColor = 'orange'" onBlur = "this.style.backgroundColor = 'white' ">
+    <a href="summary-page.html"><img src="../Day 9 DOM/Images/img1.jpeg" alt="No Image"></a>
+    <img src="./Images/img.webp" alt="" onMouseover=" src = './Images/img1.jpeg'">
+    <a href="index.html" onMouseover="this.style.color='green';">Home Page</a> -->
+    <!-- <form action="JavaScript:void(0)" onsubmit="checkAddress('email')">
+        Email:<br />
+        <input type="text" size = "30" id = "email"><br /> <br />
+        <input type="submit" name="submit" id="sub" >
+    </form> -->
+    <form action="#">
+        ZipCode:<br />
+        <input type="text" name="" id="zip" onblur="fillCity()">
+        <br>City: <br>
+        <input type="text" name="" id="city">
+    </form>
+    <script>
+        function fillCity(){
+            const zipCode = document.getElementById('zip').value ;
+            console.log(zipCode)
+            var cityName;
+            switch(zipCode){
+                case "12345" :
+                    cityName = "Karachi";
+                    break;
+                case "67890" :
+                    cityName = "Lahore";
+                    break;
+                case "98765" :
+                    cityName = "Islamabad"
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById('city').value= cityName ;
+        }
+        // function checkAddress(email){
+        //     if ( document.getElementById('email').innerHTML !== "" ){
+        //         alert("email is entered!")
+        //     }
+        //     else{
+        //         alert("email isn't recieved!")
+        //     }
+        // }
+    </script>
+</body>
+</html>
