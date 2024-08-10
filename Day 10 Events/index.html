@@ -6,17 +6,25 @@
     <title>Document</title>
     <style>
         .toggling{
-            width: 0px;
+            height: 600px;
+            /* width: 0px; */
             /* display: none; */
-            border: 5px solid black;
+            /* border: 5px solid black; */
+        }
+        .check{
+            width: 200px;
+            height: 500px;
         }
     </style>
 </head>
 <body>
-    <p  onclick="changeContent()" id="para" >Hello I am Before model</p>
-    <img src="Images/img.webp" alt="No-Image" ondblclick="toggle()" id="img1"> 
+    <p  onclick="changeContent()"  id="para" >Hello I am Before model</p>
+    <img src="Images/img.webp" alt="No-Image" onclick="toggle()"  id="img1" class="check"> 
     <!-- Id's values are case sentitive -->
     <a href="JavaScript:void(0)" onMouseover = "changeBackground()" id="link">Click</a>
+    <input type="text" name="" id="inputField" onkeypress="output(event)">
+    <p id="para1"><em>onkeydown</em> event handler executes what key is physically pressed.</p>
+    <input type="text" name="" id="inputField1" placeholder="Enter text to write in paragraph" onkeyup="addContent(event)">
     <script src="eventsHandlers.js"></script>
 </body>
 </html>

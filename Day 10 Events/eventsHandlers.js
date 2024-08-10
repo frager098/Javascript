@@ -8,7 +8,9 @@
 const changeContent = () => document.getElementById('para').innerHTML = "I am After Model!";
 function toggle(){
     const image = document.getElementById('img1');
-    image.classList.toggle("toggling")
+    console.log(image.className);
+    // image.classList.toggle("toggling");
+    image.className = "toggling";
 }
 // Activity 2 : Mouse Events
 //Task  and 4 : Add a mouseover Event Listener to an element that changes it's background color and add a mouseout event listener that sets it's background color.
@@ -21,3 +23,16 @@ function changeBackground() {
         elem.style.backgroundColor = 'white';
     })
  };
+ // Activity 3 : Keyboard Events
+ //Task 5 : Add a keydown event listener to an input field that logs the key pressed  to the console
+ function output(event){
+    console.log(event.key);
+    console.log(event.type);
+    console.log(event.target);
+ }
+ // Task 6 : Add a keyup event listener to an input field that displays the current value in paragraph
+ function addContent(event){
+    let paragraph = document.getElementById('para1');
+    let inputField = document.getElementById('inputField1');
+    paragraph.innerHTML += event.key; 
+ }

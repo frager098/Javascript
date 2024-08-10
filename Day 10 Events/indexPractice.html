@@ -31,40 +31,15 @@
         <input type="text" size = "30" id = "email"><br /> <br />
         <input type="submit" name="submit" id="sub" >
     </form> -->
-    <form action="#">
+    <!-- <form action="#">
         ZipCode:<br />
         <input type="text" name="" id="zip" onblur="fillCity()">
         <br>City: <br>
         <input type="text" name="" id="city">
-    </form>
-    <script>
-        function fillCity(){
-            const zipCode = document.getElementById('zip').value ;
-            console.log(zipCode)
-            var cityName;
-            switch(zipCode){
-                case "12345" :
-                    cityName = "Karachi";
-                    break;
-                case "67890" :
-                    cityName = "Lahore";
-                    break;
-                case "98765" :
-                    cityName = "Islamabad"
-                    break;
-                default:
-                    break;
-            }
-            document.getElementById('city').value= cityName ;
-        }
-        // function checkAddress(email){
-        //     if ( document.getElementById('email').innerHTML !== "" ){
-        //         alert("email is entered!")
-        //     }
-        //     else{
-        //         alert("email isn't recieved!")
-        //     }
-        // }
+    </form> -->
+    <p id="synchro">Synchronization is the coordination of events to operate a system in unison. <a href="JavaScript:void(0)" onclick = "expandPara()">Click for more</a></p>
+    <img src="before-pic.jpg" id="before" onMouseover="swapPic(id,'after-pic.jpg');">
+    <script src = "script.js">
     </script>
 </body>
 </html>
