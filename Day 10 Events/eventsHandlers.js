@@ -29,6 +29,7 @@ function changeBackground() {
     console.log(event.key);
     console.log(event.type);
     console.log(event.target);
+    
  }
  // Task 6 : Add a keyup event listener to an input field that displays the current value in paragraph
  function addContent(event){
@@ -36,3 +37,16 @@ function changeBackground() {
     let inputField = document.getElementById('inputField1');
     paragraph.innerHTML += event.key; 
  }
+ // Activity 2 : Form Events
+ // Task 7 : Add a submit event listener to a form that prevents the default submission and logs the data to the console.
+ function submitting(event){
+    event.preventDefault();
+    console.log('a');
+    const form = document.getElementById('myForm');
+    console.log(form.firstname.value);
+    console.log(form.lastname.value);
+ }
+ //Task 8 : Add a change event listener to a select dropdown that displays the selected value in a paragraph
+ document.getElementById('dropdown').addEventListener('change' , function (){
+   document.getElementById('para2').innerHTML = document.getElementById('dropdown').value ;
+ })
