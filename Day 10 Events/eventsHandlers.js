@@ -25,28 +25,56 @@ function changeBackground() {
  };
  // Activity 3 : Keyboard Events
  //Task 5 : Add a keydown event listener to an input field that logs the key pressed  to the console
- function output(event){
-    console.log(event.key);
-    console.log(event.type);
-    console.log(event.target);
+//  function output(event){
+//     console.log(event.key);
+//     console.log(event.type);
+//     console.log(event.target);
     
- }
+//  }
  // Task 6 : Add a keyup event listener to an input field that displays the current value in paragraph
- function addContent(event){
-    let paragraph = document.getElementById('para1');
-    let inputField = document.getElementById('inputField1');
-    paragraph.innerHTML += event.key; 
- }
+//  function addContent(event){
+//     let paragraph = document.getElementById('para1');
+//     let inputField = document.getElementById('inputField1');
+//     paragraph.innerHTML += event.key; 
+//  }
  // Activity 2 : Form Events
  // Task 7 : Add a submit event listener to a form that prevents the default submission and logs the data to the console.
- function submitting(event){
-    event.preventDefault();
-    console.log('a');
-    const form = document.getElementById('myForm');
-    console.log(form.firstname.value);
-    console.log(form.lastname.value);
- }
+//  function submitting(event){
+//    // event.stopPropagation();
+//     event.preventDefault();
+//     console.log('a');
+//     const form = document.getElementById('myForm');
+//     console.log(form.firstname.value);
+//     console.log(form.lastname.value);
+//  }
  //Task 8 : Add a change event listener to a select dropdown that displays the selected value in a paragraph
- document.getElementById('dropdown').addEventListener('change' , function (){
-   document.getElementById('para2').innerHTML = document.getElementById('dropdown').value ;
+//  document.getElementById('dropdown').addEventListener('change' , function (){
+//    document.getElementById('para2').innerHTML = document.getElementById('dropdown').value ;
+//  })
+ // Activity 5 : Event Delegation
+ // Task 9 : Add a click event listener to a list that logs the text content of the clicked list item using evemt delegation
+ const parent = document.createElement('ol');
+ for ( let i = 0 ; i < 10 ; i++ ){
+   const listItem = document.createElement('li');
+   listItem.textContent = "Child "+ i ;
+   parent.appendChild(listItem); 
+ }
+ document.body.appendChild(parent);
+ parent.addEventListener('click' , (event)=>{
+    if ( event.target.nodeName === 'LI'){
+       console.log(event.target.innerHTML,'clicked')
+    }
  })
+//  parent.addEventListener('click',()=>console.log("parent clicked"),true) //Bubbling and Capturing Phase Learning
+//  parent.childNodes[3].addEventListener('click' , function(event){
+//    // if ( event.target.nodeName === 'LI'){
+//       console.log(event.target.tagName, 'clicked');
+//    // }
+//  } , false)
+
+
+//Task 10 : Add an event listener to a parent Element that listens for events from dynamically added child Elements
+const newChild = document.createElement('li');
+newChild.textContent = 'new child';
+parent.appendChild(newChild);
+// document.body.appendChild(parent); Already added above to the body

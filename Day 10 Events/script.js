@@ -31,7 +31,7 @@
 //     const element = document.getElementById('synchro');
 //     element.innerHTML = "Synchronization is the coordination of events to operate a system in unison. For example, the conductor of an orchestra keeps the orchestra synchronized or in time. Systems that operate with all parts in synchrony are said to be synchronous or in sync—and those that are not are asynchronous.";
 // }
-function swapPic(eId, newPic) {
-    console.log(eId,newPic);
-     document.getElementById(eId).src = newPic;
-     }
+// function swapPic(eId, newPic) {
+//     console.log(eId,newPic);
+//      document.getElementById(eId).src = newPic;
+//      }
