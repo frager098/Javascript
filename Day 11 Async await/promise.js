@@ -13,7 +13,7 @@
 // })
 
 const promiseTwo = new Promise(function (resolve , reject ) {
-    error = false;
+    error = true;
     setTimeout(function(){
         if (!error){
             console.log("Another Async Task Completed")
@@ -49,11 +49,6 @@ const naming = promiseTwo
         console.log("name" , name)
     }
 )
-.catch(
-    (error) => console.log(error)
-)
-
-
 // const naming = promiseTwo.then((user)=>{
 //     console.log(user)
 //     console.log("resolved")
