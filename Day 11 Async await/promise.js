@@ -67,18 +67,21 @@
 // )
 
 const promiseThree = new Promise(( resolve , reject )=>{
+    //Producing Code 
     setTimeout (()=>{
         let error = true ; 
         if (!error){
-            resolve({name:"Moyo",password:"123"})
+            console.log("promiseThree:if") ;
+            resolve({name:"Moyo",password:"123"}) ;
         }  
         else{
-            reject("Error: Something went wrong")
+            console.log("promiseThree:else") ;
+            reject("Error: Something went wrong") ;
         }
-    },2000)
+    },2000) ;
 })
-
 async function  consumingPromiseThree(){ //Async makes a function  return a promise . It works like .then() method!
+    //Consuming code (Here we wait for a promise and execute our code after sometime)
     try {
         console.log("consuming promise") ; 
         //Await can only be used in async functions 
@@ -93,7 +96,7 @@ async function  consumingPromiseThree(){ //Async makes a function  return a prom
 const namee = consumingPromiseThree()
 setTimeout(
     ()=>{
-console.log(namee) //Will console promise
+console.log(namee) //Will console promise object
     },3000
 )
 
@@ -114,3 +117,29 @@ asyync().then(
         console.log(msg)
     }
 )
+//Fetch 
+// async function promiseFour (){
+//     try{
+//         console.log("promiseFour");
+//         //It's like a promise
+//         const result = await fetch("https://dummyjson.com/test")
+//         //It's like a promise
+//         console.log(await result.json()) //These conversions take time though , have to use await for pausing execution
+//     }catch(error){
+//         console.log(error) ;
+//     }
+// }
+// promiseFour();
+
+//Another way to fetch data
+fetch("https://dummyjson.com/test")
+.then( (response) => {
+    return response.json();
+    // console.log(response);
+})
+.then( (response)=>{
+    console.log(response);
+})   
+.catch( (error) => {
+    console.log("E: ",error);
+}) 
