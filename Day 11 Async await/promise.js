@@ -27,19 +27,30 @@ const promiseTwo = new Promise(function (resolve , reject ) {
     } ,1000 )
 }
 )
-const naming = promiseTwo.then((user)=>{
+const naming = promiseTwo
+.then((user)=>{
     console.log(user)
     console.log("resolved")
     return user.name ;
     
-},function(error){
-    console.log(error);
+}
 
-})
+// ,function(error){
+//     console.log(error);
+
+// }
+).catch(
+    (error)=>{
+        console.log(error);
+    }
+)
 .then(
     function(name){
-        console.log(name)
+        console.log("name" , name)
     }
+)
+.catch(
+    (error) => console.log(error)
 )
 
 
