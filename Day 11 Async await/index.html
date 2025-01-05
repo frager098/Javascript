@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="butt"style ="padding: 3em;background-color: aqua;">Get Github Profile</button>
+
+                                 
+<script src="promise.js">
+
+    // Practice
+    //Seding an HTTP request through 
+//     const button = document.querySelector('#butt');
+//     const request = "https://api.github.com/users/hiteshchoudhary" ;
+//     let image ;
+//     let followers ;
+//     button.addEventListener("click",() => {
+//         //AJAX (Asynchronous Javascript and XML) Or HTTP Request
+
+//         //API CALL
+//     const xhr = new XMLHttpRequest() ;
+//     xhr.open("Get",request);
+    
+//     xhr.send();
+//     xhr.onreadystatechange = function (){
+//         if (xhr.readyState === 4 ){
+//             const hiteshData = JSON.parse(xhr.responseText) ;
+//             image = hiteshData.avatar_url ;
+//             followers = hiteshData.followers ;
+//             let elem = document.createElement("img") ;
+//     elem.src = image ;
+//     document.body.appendChild(elem);
+//     let elem2 = document.createElement("p")
+//     elem2.textContent = followers;
+//     document.body.appendChild(elem2);
+//         }
+//     }
+//     }
+// )
+
+
+    //Older way to interact with servers in JS
+    // const request = "https://api.github.com/users/frager098"
+    // const xhr = new XMLHttpRequest();
+    // console.log(xhr.readyState)
+    // xhr.open("Get",request)
+    // console.log(xhr.readyState)
+    // xhr.onreadystatechange = function (){
+    //     console.log("In function",this.readyState)
+    //     if(this.readyState === 4 ){
+
+    //         console.log("In if",xhr.responseText)
+    //         const data = JSON.parse(xhr.responseText);
+    //         // console.log(typeof data)
+    //         console.log(data.blog);
+    //         cons
+    //     }
+    // }
+    // xhr.send()
+
+
+    //JSON Object ,Data Object in JSON Format , Valid JSON , JSON data
+    //JSON(Javascript Object Notation)
+// {
+//     "name" : "Arham" ,
+//     "id" : 123456 ,
+//     "login" : "GitHub" ,
+//     "education" : {"Each Institue ": ["Kids Club School" ,"Adamjee govt. Science College" ,"Karachi University"],
+//      "Age" : [1,2,3,4,5]
+//     }
+// }    
+</script>
+</body>
+</html>

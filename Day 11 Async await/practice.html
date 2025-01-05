@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <h1 id="heading">Arham Genius</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+const hex = "123456789ABCDEF" ;
+let color ="#";
+let starter ;
+        // Random hex code  generator
+    function colorGenerator(){
+        for (let i = 0 ; i < 6 ; i++ ){
+             color +=  hex[Math.floor( ( Math.random() * 16) )] ; 
+             //Math.random() generating random numbers from 0(inclusive) to 1(exclusive) Then,
+             //*16 is converting from the range of (0 , 1 ] , (0,16]
+            //Math.floor() rounding it down to the nearest number
+            //then the number became the index for hex string
+
+            //let color += n ; //Memory doesn't allocated yet.Can't allocate before initializing!
+        }
+        // const elem = document.querySelector("#heading") ;
+        document.body.style.backgroundColor = color ;
+        // console.log(color)
+        color="#"
+    }
+if ( !starter){
+
+    document.querySelector("#start").addEventListener("click", function (){
+        starter = setInterval(colorGenerator,200) 
+    } )
+}
+    
+    document.querySelector("#stop").addEventListener("click", function (){ 
+        clearInterval(starter);
+        starter = null ;
+    })
+
+        // console.log(color)
+//SetInterval Function
+
+        // let starter ;
+        // function nameAndDatePrint(){
+        //     console.log("Arham",Date.now())
+        // }
+        
+        // document.querySelector("#start").addEventListener("click", function (){
+            
+        //     starter = setInterval(nameAndDatePrint , 2000)  ; // Will continue to execute newAndDatePrint function after 2 seconds gap
+        // }
+        // ) 
+        // document.querySelector("#stop").addEventListener("click",function (){
+        //     clearInterval(starter) //Will stop executing newAndDatePrint function after 2 seconds gap
+        // }
+        // );
+        
+//Callbacks
+
+        // function myCalculator(n1 , n2 ,myCallBack){
+        //     let sum = n1 + n2 ;
+        //     myCallBack(sum)
+        // }
+        // const myDisplayer = function (some){
+        //     document.getElementById('para').innerHTML = some ;
+        // }
+        // myCalculator(1,3,myDisplayer);
+
+        // const myArray = [1,9,10,-2,-12,8]
+        // function positiveNum(arg){
+            
+        //         if(arg> 0 ){
+        //             return arg;
+        //         }
+        //         // return arg
+        //     }
+            
+        //         function myFunction ( myCallBack1,args){
+        //             const newArray = [];
+        //             for(const x of args ){
+        //                 const result = myCallBack1(x);
+        //                 if(result){
+        //                     newArray.push(result);
+        //                 }
+        //                  else{
+        //                     continue ;
+        //                 }
+                    
+        //             }
+        //             return newArray;
+        //     }
+
+        // const positiveArray = myFunction(positiveNum , myArray);
+        // document.getElementById('para').innerHTML = positiveArray
+        // console.log(positiveArray)
+    </script>
+</body>
+</html>
