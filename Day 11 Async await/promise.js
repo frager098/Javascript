@@ -68,6 +68,7 @@
 
 const promiseThree = new Promise(( resolve , reject )=>{
     //Producing Code 
+    console.log("promise-three");
     setTimeout (()=>{
         let error = true ; 
         if (!error){
@@ -82,6 +83,7 @@ const promiseThree = new Promise(( resolve , reject )=>{
 })
 async function  consumingPromiseThree(){ //Async makes a function  return a promise . It works like .then() method!
     //Consuming code (Here we wait for a promise and execute our code after sometime)
+    console.log("async function");
     try {
         console.log("consuming promise") ; 
         //Await can only be used in async functions 
@@ -90,24 +92,27 @@ async function  consumingPromiseThree(){ //Async makes a function  return a prom
         return response
         
     } catch (error) {
-        console.log(error)
+        console.log("in catch ", error)
     }
 }
 const namee = consumingPromiseThree()
 setTimeout(
     ()=>{
-console.log(namee) //Will console promise object
+        console.log(namee)
+        //Will console promise object
     },3000
 )
 
 async function myFunction (){
-    return "Hello"
+    console.log("myFunction")
+    return "Hello";
 }
 //It is same as 
 function asyync(){
     return Promise.resolve("Hell")
 }
-myFunction().then(
+myFunction()
+.then(
     (msg)=>{
         console.log(msg)
     }
@@ -118,28 +123,29 @@ asyync().then(
     }
 )
 //Fetch 
-// async function promiseFour (){
-//     try{
-//         console.log("promiseFour");
-//         //It's like a promise
-//         const result = await fetch("https://dummyjson.com/test")
-//         //It's like a promise
-//         console.log(await result.json()) //These conversions take time though , have to use await for pausing execution
-//     }catch(error){
-//         console.log(error) ;
-//     }
-// }
-// promiseFour();
-
+async function promiseFour (){
+    try{
+        console.log("promiseFour");
+        //It's like a promise
+        const result = await fetch("https://dummyjson.com/test");
+        //It's like a promise
+        console.log(await result.json() , "promise-four"); //These conversions take time though , have to use await for pausing execution
+    }catch(error){
+        console.log(error);
+    }
+}
+promiseFour();
 //Another way to fetch data
 fetch("https://dummyjson.com/test")
-.then( (response) => {
-    return response.json();
-    // console.log(response);
+.then( (response) => {  //Each .then waits for the promise to complete in the chain
+    console.log("fetch-0")
+    return response.text();
 })
 .then( (response)=>{
+    console.log("fetch-1");
     console.log(response);
 })   
 .catch( (error) => {
+    console.log("fetch-2");
     console.log("E: ",error);
 }) 
