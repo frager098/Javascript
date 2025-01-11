@@ -90,16 +90,15 @@ async function asyncFunctionOne() {
 
 //Task 5 : Write an async function that handles a rejected promise using try-catch and logs the error message
 async function asyncFunctionTwo() {
-    return await  new Promise((resolve, reject) => {
-        try {
-            const xhr = new XMLHttpRequest();
-            xhr.open("Get", "https://api.github.com/users/frag===er098")
-            xhr.send();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
+    try {
+            const response = await  new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open("Get", "https://api.github.com/users/frager098")
+                xhr.send();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
-                        // resolve(xhr.response);
-                        console.log("response asyncFunctionTwo",xhr.response);
+                        resolve(`resolve: ${xhr.response}`);
 
                     }
                     else {
@@ -108,15 +107,18 @@ async function asyncFunctionTwo() {
                 }
             }
 
+            //Handling promises with try and catch only
+            
+        })
+        console.log(response)
+    }
+    catch (err) {
+        console.log("catch", err);
+    }
+    
 
-        }
-        catch (err) {
-            console.log("catch", err);
-        }
-
-    })
 }
-// asyncFunctionTwo()
+asyncFunctionTwo()
 // .then((response)=>{
 //     console.log("response asyncFunctionTwo",response);
 // })
@@ -127,23 +129,56 @@ async function asyncFunctionTwo() {
 
 //Activity 4 : Fetching Data from an API
 //Task 6 : Use the fetch API to get data from a public API and log the response data to the console using promises.
-fetch("https://api.github.com/users/frager098")
-.then((response)=>{
-    console.log("fetch",response);
-})
-.catch((error)=>{
-    console.log(error);
-})
+// fetch("https://api.github.com/users/frager098")
+// .then((response)=>{
+//     console.log("fetch",response);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
 
 //Task 7 : Use the fetch API to get data from a public APi and log the response data to the console using async await.
-async function asyncFunctionThree(){
-    const res = await fetch("https://api.github.com/users/frager098");
-    return res ;
-}
-asyncFunctionThree()
-.then((response)=>{
-    console.log(response);
+// async function asyncFunctionThree(){
+//     const res = await fetch("https://api.github.com/users/frager098");
+//     return res ;
+// }
+// asyncFunctionThree()
+// .then((response)=>{
+//     console.log(response);
+// })
+// .catch((error)=>{
+//     console.log(error)
+// })
+
+// Activity 5 : Concurrent Promises
+
+// Task 8 : Use Promise.all to wait for multiple promises to resolve and log all their values.
+const concurrentPromiseOne = new Promise ( (resolve) => {
+    setTimeout( resolve ,2000 , "resolved concurrent-promise-one");
 })
-.catch((error)=>{
+const concurrentPromiseTwo = new Promise ( (resolve , reject) => {
+    setTimeout( reject ,3000 , "resolved concurrent-promise-two");
+})
+const concurrentPromiseThree = new Promise ( (resolve) => {
+    setTimeout( resolve ,4000 , "resolved concurrent-promise-three");
+})
+const concurrentPromiseFour = 1203 ;
+let concurrentPromiseFive ;
+Promise.all([concurrentPromiseOne,concurrentPromiseTwo,concurrentPromiseThree,concurrentPromiseFour,concurrentPromiseFive])
+.then ( (msg) => {
+    console.log(msg);
+})
+.catch( (error) => {
     console.log(error)
+})
+Promise.all([])
+.then( (msg) =>{
+    console.log("empty",msg)
+})
+
+// Task 9 : Use Promise.race to log the value of the first promise that resolves among multiple promises
+
+Promise.race([concurrentPromiseOne,concurrentPromiseTwo,concurrentPromiseThree,concurrentPromiseFour,concurrentPromiseFive])
+.then ( (msg) => {
+    console.log(msg);
 })
