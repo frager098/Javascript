@@ -56,34 +56,134 @@
 // Activity 3 : Custom Error Objects 
 
 // Task 4 : Create a custom error class that extends the built-in Error class. Throw an instance of this custom error in a function and handle it using a try catch block
+
+// Source : "https://javascript.info/custom-errors"
+// The "pseudocode" for the built-in Error class defined by JavaScript itself
+
+// class Error {
+//     constructor(message) {
+//       this.message = message;
+//       this.name = "Error"; // (different names for different built-in error classes)
+//       this.stack = <call stack>; //non-standard, but most environments support it
+//     }
+//   }
+
+
 class CustomError extends Error {
-    msg = "Error in custom error class" ;
-    settingError = function ( string ) {
-     this.msg = string ;
-    return this.msg 
+    constructor(string) {
+        super(string) // Calls constructor of parent class
+        this.name = "Custom Error"; // Setting name property of the current object
     }
+
 }
 
 const customErrorFunction = () => {
     throw new CustomError("Setting error");
 }
-try {
-    customErrorFunction();
-    // conso.g(result);
-} catch (error) {
-    console.log(error.msg);
-}
+// try {
+//     customErrorFunction();
+// } catch (error) {
+//     console.log(error.message);
+// }
 
 // Task 5 : Write a function that validates user input (e.g checking if a string is non-empty) and throws a custom error if the validation fails.Handle the custom error using try-catch block.
-const validator = ( ) => {
-    const input = prompt("Enter string") ;
+const validator = () => {
+    const input = prompt("Enter string");
     // console.log(input.valueOf())
-    if (input.valueOf() === ""){
-        throw new CustomError( "Validation fails")
+    if (input === "") {
+        const myError = new CustomError("Validation fails")
+        throw myError.name;
     }
 }
-try {
-    validator()
-} catch (error) {
-    console.log(error.msg);
+// try {
+//     validator()
+// } catch (error) {
+//     console.log(error);
+// }
+
+// Activity 4 : Error Handling in Promises 
+
+// Task 6 : Create a promise that randomly resolves or rejects. Use .catch() to handle the rejection and log an appropriate message to the console.
+
+const randomlyRejectingPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("reject");
+    }, 2000)
+})
+randomlyRejectingPromise
+    .then((msg) => {
+        console.log(msg);
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+
+// Task 7 : Use a try-catch within an async function to handle errors from a promise that randomly resolves or rejects , and log the error message
+const myPromise = () => {
+    return new Promise( (resolve,reject) =>{
+        const random = Math.random();
+        console.log(random)
+        if (random > 0.5) {
+            resolve("resolved");
+        }
+        else {
+            reject("Random Function rejected")
+        }
+    })
 }
+async function randomPromise() {
+    try{
+        const returnPromise = await myPromise(); // The await keyword acts as if it’s calling .then() internally on the promise to wait for its resolution.
+        console.log(returnPromise);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+randomPromise();
+
+// Activity 5 : Graceful Error Handling in Fetch
+
+// Task 8 : Use the fetch API to request data from an invalid URL and handle the error using .catch().Log an appropriate error message to the console.
+
+async function fetching ( ){
+   const response =  await fetch("https://a.github.com/user/frager098")
+   if(!response.ok){
+    throw new CustomError("Error in fetching")
+   }
+   return response ;
+}
+
+// fetching()
+// .then( (response) => {
+//     console.log(response);
+// })
+// .catch((error)=>{
+//     console.error(error.message)
+// })
+
+                    //*****Wrong implementation******
+
+// async function fetching ( ){
+//     return await fetch("https://a.github.com/user/frager098")
+//  }
+//  try{
+//      const data = fetching(); // Execution will not wait here for asynchronous fetching 
+//  }
+//  catch(error){
+//      console.log(error);
+//  }
+            //********************// 
+
+// Task 9 : Use the fetch API to request data from an invalid URL within an async function and handle the error using try-catch.Log an appropriate error message to the console.
+
+const handlingFetchResponse = async () => {
+    try{
+        const data = await fetching();
+        console.log(data) ;
+    }
+    catch(error){
+        console.log(error.message);
+    }
+}
+handlingFetchResponse();
